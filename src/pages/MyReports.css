@@ -1,0 +1,162 @@
+.myreports-container {
+  max-width: 1000px;
+  margin: 100px auto 40px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.myreports-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #fffaf3, #fff1e6, #fffaf3);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  z-index: -1;
+  border-radius: 16px;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.myreports-title {
+  font-size: 28px;
+  color: #EB6424;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.myreports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.myreport-card {
+  background: #fffaf3;
+  border: 2px solid #F0B31A;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(250, 149, 0, 0.1);
+  transition: 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.myreport-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(250, 149, 0, 0.15);
+}
+
+.myreport-card h3 {
+  color: #EB6424;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.myreport-card p {
+  color: #555;
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.delete-btn {
+  margin-top: 12px;
+  background-color: #EB6424;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background-color: #c73e0c;
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .myreports-container {
+    width: 85%;
+    margin: 80px auto 30px auto;
+    padding: 20px 16px;
+  }
+
+  .myreports-title {
+    font-size: 24px;
+  }
+
+  .myreport-card {
+    padding: 16px;
+  }
+
+  .myreport-card h3 {
+    font-size: 18px;
+  }
+
+  .myreport-card p {
+    font-size: 14px;
+  }
+
+  .delete-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .myreports-container {
+    width: 90%;
+    margin: 60px auto 20px auto;
+    padding: 16px 12px;
+  }
+
+  .myreports-title {
+    font-size: 22px;
+  }
+
+  .myreport-card {
+    padding: 14px;
+  }
+
+  .myreport-card h3 {
+    font-size: 16px;
+  }
+
+  .myreport-card p {
+    font-size: 13px;
+  }
+
+  .delete-btn {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foda+Display&display=swap');
+
+.additems-wrapper {
+  position: relative;
+  padding-top: 110px;
+  min-height: 100vh;
+  background-color: #fffaf3;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.additems-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(251, 162, 54, 0.15);
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.additems-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(234, 100, 36, 0.2);
+}
+
+.form-title {
+  font-family: 'Foda Display', sans-serif;
+  font-size: 32px;
+  color: #EB6424;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-form label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.add-form input,
+.add-form textarea,
+.add-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  background-color: #fffaf3;
+  border: 2px solid #F0B31A;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-form input:focus,
+.add-form textarea:focus,
+.add-form select:focus {
+  border-color: #FA9500;
+  box-shadow: 0 0 6px rgba(250, 149, 0, 0.25);
+  outline: none;
+}
+
+.add-form button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #EB6424, #FA9500);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.add-form button:hover {
+  background: linear-gradient(90deg, #F37D12, #F78909);
+  transform: scale(1.02);
+}
+
+/* Tablet - As You Wrote */
+@media (max-width: 768px) {
+  .additems-container {
+    margin-top: 2rem;
+    height: 90%;
+    width: 70%;
+    padding: 30px 24px;
+  }
+
+  .form-title {
+    font-size: 28px;
+  }
+
+  .form-subtitle {
+    font-size: 13px;
+  }
+
+  .add-form input,
+  .add-form textarea {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .add-form select {
+    width: 98%;
+    font-size: 14px;
+  }
+
+  .add-form button {
+    font-size: 15px;
+  }
+}
+
+/* Mobile - Adjusted same logic */
+@media (max-width: 480px) {
+  .additems-container {
+    width: 85%;
+    padding: 24px 16px;
+    height: auto;
+    margin-top: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+
+  .form-subtitle {
+    font-size: 12px;
+  }
+
+  .add-form input,
+  .add-form textarea {
+    width: 90%;
+    font-size: 13px;
+  }
+
+  .add-form select {
+    width: 98%;
+    font-size: 13px;
+  }
+
+  .add-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
