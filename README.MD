@@ -14,7 +14,7 @@ A responsive web app to report, find, and manage lost and found items within a c
 
 📱 Responsive Design — Mobile-friendly and fully responsive UI
 
-☁️ Deployed on Netlify
+☁️ Deployed on Vercel
 
 🛠️ Tech Stack
 Frontend — React.js, React Router, Context API
